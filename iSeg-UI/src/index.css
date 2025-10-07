@@ -1,0 +1,142 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* RadOnc Medical UI Design System - Professional clinical interface */
+
+@layer base {
+  :root {
+    /* Clinical Background Colors */
+    --background: 0 0% 98%;
+    --foreground: 215 25% 15%;
+    --clinical-bg: 210 14% 97%;
+
+    /* Medical Card System */
+    --card: 0 0% 100%;
+    --card-foreground: 215 25% 15%;
+    --card-border: 210 12% 88%;
+
+    /* Clinical Panels */
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 25% 15%;
+
+    /* Medical Blue Primary */
+    --primary: 217 91% 55%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 217 91% 48%;
+    --primary-light: 217 95% 95%;
+
+    /* Clinical Secondary */
+    --secondary: 210 16% 93%;
+    --secondary-foreground: 215 25% 25%;
+    --secondary-hover: 210 16% 88%;
+
+    /* Medical Muted */
+    --muted: 210 16% 95%;
+    --muted-foreground: 215 16% 45%;
+
+    /* Clinical Accent */
+    --accent: 210 16% 93%;
+    --accent-foreground: 215 25% 25%;
+
+    /* Medical Alert Colors */
+    --destructive: 0 72% 55%;
+    --destructive-foreground: 0 0% 100%;
+    --medical-success: 142 71% 45%;
+    --medical-warning: 45 93% 47%;
+
+    /* Clinical Borders & Inputs */
+    --border: 210 12% 88%;
+    --input: 210 12% 88%;
+    --ring: 217 91% 55%;
+
+    /* Medical Structure Colors for Overlays */
+    --tumor-overlay: 0 85% 55%;
+    --organ-overlay: 217 91% 55%;
+    --lung-overlay: 142 71% 45%;
+    --heart-overlay: 280 85% 55%;
+    --bone-overlay: 45 93% 47%;
+
+    /* Medical Gradients */
+    --gradient-clinical: linear-gradient(135deg, hsl(217 95% 98%), hsl(210 16% 95%));
+    --gradient-primary: linear-gradient(135deg, hsl(217 91% 55%), hsl(217 91% 48%));
+    --gradient-overlay: linear-gradient(180deg, transparent, hsl(0 0% 0% / 0.05));
+
+    /* Clinical Shadows */
+    --shadow-clinical: 0 2px 8px hsl(215 25% 15% / 0.08);
+    --shadow-panel: 0 4px 12px hsl(215 25% 15% / 0.1);
+    --shadow-elevated: 0 8px 24px hsl(215 25% 15% / 0.12);
+
+    /* Medical Animations */
+    --transition-clinical: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 215 25% 8%;
+    --foreground: 210 40% 98%;
+    --clinical-bg: 215 25% 6%;
+
+    --card: 215 25% 10%;
+    --card-foreground: 210 40% 98%;
+    --card-border: 215 25% 18%;
+
+    --popover: 215 25% 10%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 217 91% 55%;
+    --primary-foreground: 215 25% 8%;
+    --primary-hover: 217 91% 48%;
+    --primary-light: 217 95% 15%;
+
+    --secondary: 215 25% 18%;
+    --secondary-foreground: 210 40% 98%;
+    --secondary-hover: 215 25% 25%;
+
+    --muted: 215 25% 15%;
+    --muted-foreground: 215 16% 65%;
+
+    --accent: 215 25% 18%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 72% 55%;
+    --destructive-foreground: 210 40% 98%;
+    --medical-success: 142 71% 45%;
+    --medical-warning: 45 93% 47%;
+
+    --border: 215 25% 18%;
+    --input: 215 25% 18%;
+    --ring: 217 91% 55%;
+
+    --tumor-overlay: 0 85% 55%;
+    --organ-overlay: 217 91% 55%;
+    --lung-overlay: 142 71% 45%;
+    --heart-overlay: 280 85% 55%;
+    --bone-overlay: 45 93% 47%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  /* Medical UI Enhancements */
+  .clinical-card {
+    @apply bg-card border border-card-border rounded-lg shadow-sm;
+  }
+  
+  .medical-overlay {
+    @apply transition-opacity duration-200 hover:opacity-60;
+  }
+  
+  .structure-legend {
+    @apply flex items-center space-x-2 text-sm;
+  }
+}
